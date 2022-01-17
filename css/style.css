@@ -15,7 +15,7 @@
     grid-template-areas:
       "nav nav"
       "header header"
-      "accommodations aside"
+      "reservations aside"
       "activities activities"
       "footer footer";
   }
@@ -47,7 +47,7 @@
     text-decoration: none;
     color: inherit;
   }
-  .accommodations-btn {
+  .reservation-btn {
     color: #1e90ff;
     border-top: #0065fc solid 1px;
   }
@@ -155,13 +155,13 @@
       font-weight:500;
   }
   
-  .accommodations {
+  .reservations {
     width: 90%;
     height: fit-content;
     margin-left: 40px;
     background-color: #ececec;
     border-radius: 20px;
-    grid-area: accommodations;
+    grid-area: reservations;
   }
   .section-title {
     margin: 30px 0 20px 30px;
@@ -225,7 +225,7 @@
     border-top-right-radius: 20px;
     padding: 3px;
   }
-  .card-accommodations {
+  .card-reservations {
     padding: 0px 0px 0px 15px;
     line-height: 1.5;
   }
@@ -419,7 +419,7 @@
     }
   }
   @media only screen and (max-width: 767px) {
-    .accommodations {
+    .reservations {
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -427,7 +427,7 @@
       background-color: #fff;
       order: 4;
     }
-    .accommodations h3 {
+    .reservations h3 {
         font-size: 20px;
         margin-left: 20px;
     }
@@ -510,7 +510,7 @@
       right: 20px;
       padding-top: 0;
     }
-    .accommodations-btn,
+    .reservation-btn,
     .activities-btn {
       width: 50%;
       margin: 0px;
@@ -523,7 +523,7 @@
       border-bottom-style: solid;
       right: 0px;
     }
-    .accommodations-btn {
+    .reservation-btn {
       border-bottom-color: #0065fc;
       border-bottom-style: solid;
       border-top-style: none;
@@ -549,7 +549,7 @@
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1211px) {
-    .accommodations {
+    .reservations {
       height: fit-content;
       order: 4;
       width: auto;
