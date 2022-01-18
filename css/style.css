@@ -9,19 +9,11 @@
   }
   .container {
     font-family: "Raleway", sans-serif;
-    display: grid;
-    grid-template-columns: 67% 33%;
-    grid-template-rows: repeat(5, 0.1fr);
-    grid-template-areas:
-      "nav nav"
-      "header header"
-      "reservations aside"
-      "activities activities"
-      "footer footer";
+    display: flex;
+    flex-direction: column;
   }
   /*Nav Bar*/
   nav {
-    grid-area: nav;
     margin: 15px 40px;
   }
   nav img {
@@ -39,10 +31,6 @@
     font-weight: 500;
     border-top: white solid 1px;
   }
-  .sign-up a {
-    color: #1e90ff;
-    font-weight: bold;
-  }
   a {
     text-decoration: none;
     color: inherit;
@@ -52,9 +40,7 @@
     border-top: #0065fc solid 1px;
   }
   header {
-    grid-area: header;
     margin: 15px 40px;
-    order: 2;
   }
   header h6 {
     font-size: small;
@@ -161,7 +147,7 @@
     margin-left: 40px;
     background-color: #ececec;
     border-radius: 20px;
-    grid-area: reservations;
+
   }
   .section-title {
     margin: 30px 0 20px 30px;
@@ -181,10 +167,11 @@
     font-size: x-large;
   }
   aside {
-    margin-right: 40px;
+    border: 1px solid black;
     background-color: #ececec;
     border-radius: 20px;
-    grid-area: aside;
+    width: 30%;
+    margin: 0px 20px 0px 15px;
   }
   .price__2{
       display: none;
@@ -195,17 +182,16 @@
     flex-wrap: wrap;
     gap: 33px;
   }
-  
+
   .activities {
     margin: 15px 40px;
-    grid-area: activities;
+
   }
   .activities h3{
     margin-left: 0;
   }
   footer {
     background-color: #ececec;
-    grid-area: footer;
     display: flex;
     margin-top: 40px;
   }
@@ -270,38 +256,36 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
-  
-  .cards-activities {
-    display: grid;
-    grid-template-columns: repeat(4, 22%);
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 4%;
-    GRID-ROW-GAP: 25PX;
-    grid-template-areas:
-      "item1 item2 item4 item5"
-      "item1 item3 item4 item6";
+  .all-activities{
+    display: flex;
+    justify-content: space-between ;
   }
   .card-activities {
+    overflow: hidden;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.19);
     transition: box-shadow 0.5s ease-in-out;
+    width:22%;
+    margin-bottom: 2vh;
   }
   .card-activities a img {
-    width: 100%;
+    overflow: hidden;
     height: 88%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
-  .card-3v2 {
+  .card-sub {
+    overflow: hidden;
+    margin-bottom: 2vh;
     height: 30vh;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.19);
     transition: box-shadow 0.5s ease-in-out;
   }
-  .card-3v2 img {
-    width: 100%;
+  .card-sub img {
+    min-width: 100%;
     height: 75%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -315,24 +299,16 @@
     line-height: 2;
     margin: 10px 0 13px 15px;
   }
-  .item1 {
-    grid-area: item1;
+  .card-activities-group{
+    display: flex;
+    flex-direction: column;
   }
-  .item2 {
-    grid-area: item2;
+  /*Section + aside*/
+
+  .section-populaire {
+    display: flex;
   }
-  .item3 {
-    grid-area: item3;
-  }
-  .item4 {
-    grid-area: item4;
-  }
-  .item5 {
-    grid-area: item5;
-  }
-  .item6 {
-    grid-area: item6;
-  }
+
   .checked {
     color: cornflowerblue;
   }
@@ -348,7 +324,7 @@
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
-  .card-3v2:hover {
+  .card-sub:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
@@ -375,9 +351,8 @@
       width: 92%;
     }
     aside {
-      order: 3;
       border-radius: 0px;
-      margin: 0;
+      margin-right: 2px;
     }
     .cards-aside {
       margin: 0px 20px 40px 20px;
@@ -414,7 +389,7 @@
     .card-activities a img {
       height: 75%;
     }
-    .card-3v2 {
+    .card-sub {
       box-shadow:0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
     }
   }
@@ -503,12 +478,6 @@
       border: none;
       width: 22px;
       margin-left: -10px;
-    }
-    .sign-up {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding-top: 0;
     }
     .reservation-btn,
     .activities-btn {
