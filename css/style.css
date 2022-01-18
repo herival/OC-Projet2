@@ -9,15 +9,8 @@
   }
   .container {
     font-family: "Raleway", sans-serif;
-    display: grid;
-    grid-template-columns: 67% 33%;
-    grid-template-rows: repeat(5, 0.1fr);
-    grid-template-areas:
-      "nav nav"
-      "header header"
-      "reservations aside"
-      "activities activities"
-      "footer footer";
+    display: flex;
+    flex-direction: column;
   }
   /*Nav Bar*/
   nav {
@@ -52,9 +45,7 @@
     border-top: #0065fc solid 1px;
   }
   header {
-    grid-area: header;
     margin: 15px 40px;
-    order: 2;
   }
   header h6 {
     font-size: small;
@@ -181,10 +172,9 @@
     font-size: x-large;
   }
   aside {
-    margin-right: 40px;
+    /* margin-right: 40px; */
     background-color: #ececec;
     border-radius: 20px;
-    grid-area: aside;
   }
   .price__2{
       display: none;
@@ -315,6 +305,12 @@
     line-height: 2;
     margin: 10px 0 13px 15px;
   }
+
+  /*Section + aside*/
+
+  .section-populaire {
+    display: flex;
+  }
   .item1 {
     grid-area: item1;
   }
@@ -375,9 +371,8 @@
       width: 92%;
     }
     aside {
-      order: 3;
       border-radius: 0px;
-      margin: 0;
+      margin-right: 2px;
     }
     .cards-aside {
       margin: 0px 20px 40px 20px;
