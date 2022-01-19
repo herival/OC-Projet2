@@ -167,7 +167,6 @@
     font-size: x-large;
   }
   aside {
-    border: 1px solid black;
     background-color: #ececec;
     border-radius: 20px;
     width: 35%;
@@ -238,6 +237,7 @@
     margin: 0px 0 40px 30px;
   }
   .card-aside {
+    width: 100%;
     height: 140px;
     background-color: white;
     border-radius: 20px;
