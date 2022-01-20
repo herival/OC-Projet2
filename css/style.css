@@ -47,7 +47,7 @@
     line-height: 3;
     opacity: 60%;
   }
-  /*Search Bar*/
+  /*Barre de recherche*/
   form {
     margin-top: 15px;
     display: flex;
@@ -57,21 +57,21 @@
       font-weight: 800;
       color:black;
   }
-  form > input,
+  /* form > input,
   form i:first-child {
     border: #ececec solid 1px;
     padding: 13px;
     outline: none;
-  }
-  form > i:first-child {
+  } */
+  /* form > i:first-child {
     background-color: #ececec;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     font-size: 15px;
-  }
-  form i:last-child {
+  } */
+  /* form i:last-child {
     display: none;
-  }
+  } */
   
   form input:nth-child(3) {
     background-color: #0065fc;
@@ -341,6 +341,9 @@
       margin-top: 25px;
       padding-bottom: 30px;
     }
+    .footer-content{
+      width: 100%;
+    }
   
     .section-title-3 {
       font-size: large;
@@ -352,9 +355,9 @@
     }
     aside {
       order: -1;
-      width: 90%;
-      margin-left: 40px;
-      margin-bottom: 10px;
+      width: 100%;
+      margin-left: 0;
+      border-radius: 0%;
 
     }
     .cards-aside {
@@ -367,7 +370,6 @@
     .section-populaire {
       display: flex;
       flex-direction: column;
-      border: 1px solid black;
     }
     .all-activities {
       display: flex;
@@ -386,7 +388,46 @@
     .card{
       width: 100%;
     }
-    
+    #logo {
+      width: 20%;
+      margin : auto;
+      padding: auto;
+      text-align: center;
+    }
+    nav{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin-left: 0;
+    }
+    .reservation-btn{
+      border-top: none;
+      border-bottom: 1px solid #1e90ff;
+      width: 50%;
+      margin : 0;
+      color: #1e90ff;
+      text-align: center;
+    }
+    .activities-btn{
+      border-top: none;
+      border-bottom:  1px solid rgb(189, 188, 188);
+      width: 50%;
+      margin :0;
+      text-align: center;
+    }
+    .reservations{
+      background-color: transparent;
+      width: 100%;
+      margin : 0;
+    }
+    .card {
+      height: 30vh;
+    }
+    form {
+      width: 100%;
+      padding: 0;
+    }
 
   }
   
