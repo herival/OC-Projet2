@@ -389,6 +389,9 @@
     .card-sub{
       height: 60vw;
     }
+    .card-activities img {
+      height: 75%!important;
+    }
     #logo {
       width: 20%;
       margin : auto;
