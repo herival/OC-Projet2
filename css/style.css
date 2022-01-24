@@ -35,7 +35,7 @@
     text-decoration: none;
     color: inherit;
   }
-  .reservation-btn {
+  .hebergements-btn {
     color: var(--primary);
     border-top: var(--primary) solid 1px;
   }
@@ -139,7 +139,7 @@
       font-weight:500;
   }
   
-  .reservations {
+  .hebergements {
     width: 90%;
     height: fit-content;
     margin-left: 40px;
@@ -209,7 +209,7 @@
     border-top-right-radius: 20px;
     padding: 3px;
   }
-  .card-reservations {
+  .card-hebergements {
     padding: 0px 0px 0px 15px;
     line-height: 1.5;
   }
@@ -405,7 +405,7 @@
       width: 100%;
       margin-left: 0;
     }
-    .reservation-btn{
+    .hebergements-btn{
       border-top: none;
       border-bottom: 1px solid var(--primary);
       width: 50%;
@@ -419,7 +419,7 @@
       margin :0;
       text-align: center;
     }
-    .reservations{
+    .hebergements{
       background-color: transparent;
       width: 100%;
       margin : 0;
@@ -498,7 +498,7 @@
       text-align: center;
     }
 
-    .reservations{
+    .hebergements{
       background-color: transparent;
       width: 100%;
       margin : 0;
