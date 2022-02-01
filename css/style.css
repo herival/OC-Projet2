@@ -391,7 +391,7 @@
     form input:nth-child(3) {
       display: none;
     }
-    form input:first-child{
+    .placeholder{
       width: 100%;
     }
     form{
