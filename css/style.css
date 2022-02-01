@@ -7,7 +7,8 @@
     --secondary : #DEEBFF;
     --background: #F2F2F2;
   }
-  .container {
+  body {
+    overflow-x: hidden;
     font-family: "Raleway", sans-serif;
     display: flex;
     flex-direction: column;
@@ -39,8 +40,12 @@
     color: var(--primary);
     border-top: var(--primary) solid 1px;
   }
-  header {
+  .container {
     margin: 15px 40px;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
   }
   header h6 {
     font-size: small;
@@ -78,6 +83,9 @@
     border-bottom-right-radius: 10px;
     font-weight: 700;
     border: none;
+  }
+  form i:last-child{
+    display: none;
   }
   
   .filter-bar {
@@ -203,6 +211,7 @@
     transition: box-shadow 0.5s ease-in-out;
   }
   .card img {
+    object-fit: cover;
     width: 100%;
     height: 60%;
     border-top-left-radius: 20px;
@@ -249,9 +258,10 @@
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
+
   .card-aside img {
     width: 40%;
-    height: 100%;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
@@ -267,8 +277,10 @@
     transition: box-shadow 0.5s ease-in-out;
     width:22%;
     margin-bottom: 2vh;
+    height: 52vh;
   }
   .card-activities a img {
+    object-fit: cover;
     overflow: hidden;
     height: 88%;
     border-top-right-radius: 20px;
@@ -277,15 +289,22 @@
   .card-sub {
     overflow: hidden;
     margin-bottom: 2vh;
-    height: 30vh;
+    height: 35vh;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.19);
     transition: box-shadow 0.5s ease-in-out;
   }
+  .card-sub-little{
+    height: 15vh!important;
+  }
+  .card-sub-little img {
+    height: 60%!important;
+  }
   .card-sub img {
+    object-fit: cover;
     min-width: 100%;
-    height: 75%;
+    height: 83%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
@@ -361,6 +380,27 @@
       border-radius: 0%;
 
     }
+    form i:last-child{
+      display: inline;
+      padding: 13px;
+      background-color: var(--primary);
+      margin-left: -10px;
+      color: white;
+      border-radius: 10px;
+    }
+    form input:nth-child(3) {
+      display: none;
+    }
+    form input:first-child{
+      width: 100%;
+    }
+    form{
+      justify-content: space-between;
+    }
+    .btns-filters {
+      margin: 10px 0 0 0;
+    }
+    
     .cards-aside {
       margin: 0px 20px 40px 20px;
       gap: 15px;
@@ -378,20 +418,22 @@
     }
     .card-activities {
       width: 100%;
-      height: 60vw;
+      height: 30vh;
     }
     .card-activities-group {
+      flex-direction: column;
+      display: flex;
       width: 100%;
     }
     .all-activities img{
       min-width: 100%;
+      height: 75%!important;
+     
     }
     .card-sub{
-      height: 60vw;
+      height: 30vh!important;
     }
-    .card-activities img {
-      height: 75%!important;
-    }
+
     #logo {
       width: 20%;
       margin : auto;
